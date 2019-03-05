@@ -9,23 +9,29 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <% if user_signed_in? %>
-            <%= link_to current_user.username, pages_show_path %>
-            <%= link_to 'プロフィール変更', edit_user_registration_path %>
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        <% else %>
-            <%= link_to 'サインアップ', new_user_registration_path %>
-            <%= link_to 'ログイン', new_user_session_path %>
-        <% end %>
-      </nav>
+    <header class="navbar navbar-fixed-top">
+      <div class="container">
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+                <%= link_to current_user.username, pages_show_path %>
+                <%= link_to 'プロフィール変更', edit_user_registration_path %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to 'サインアップ', new_user_registration_path %>
+                <%= link_to 'ログイン', new_user_session_path %>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
     </header>
     
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
     
   </body>
 </html>

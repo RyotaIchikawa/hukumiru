@@ -3,15 +3,15 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
-      ## Database authenticatable
+      ## Database authenticatable パスワード暗号化、DB登録
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-      ## Recoverable
+      ## Recoverable パスワードリセットと通知
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable cookieのトークン生成
       t.datetime :remember_created_at
 
       ## Trackable
