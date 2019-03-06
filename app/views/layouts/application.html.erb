@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hukumiru</title>
+    <title><%= yield(:title) %> | hukumiru</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
-
   <body>
-    <header class="navbar navbar-fixed-top">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-                <%= link_to current_user.username, pages_show_path %>
-                <%= link_to 'プロフィール変更', edit_user_registration_path %>
-                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-            <% else %>
-                <%= link_to 'サインアップ', new_user_registration_path %>
-                <%= link_to 'ログイン', new_user_session_path %>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
-    
   </body>
 </html>
