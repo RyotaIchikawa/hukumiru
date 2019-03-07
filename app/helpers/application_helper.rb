@@ -1,5 +1,6 @@
 module ApplicationHelper
   
+  # ページタイトル
   def full_title(page_title = '')
     base_title = "hukumiru"
     if page_title.empty?
