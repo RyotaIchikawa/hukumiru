@@ -5,11 +5,11 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><%= link_to current_user.username, user_path(current_user) %></li>
-          <li><%= link_to "ユーザー一覧", users_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "ゆーざー", users_path %></li>
+          <li><%= link_to "ろぐあうと", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to "サインアップ", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
+          <li><%= link_to "とうろく", new_user_registration_path %></li>
+          <li><%= link_to "ろぐいん", new_user_session_path %></li>
         <% end %>
       </ul>
     </nav>
