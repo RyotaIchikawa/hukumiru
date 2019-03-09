@@ -1,0 +1,4 @@
+<% provide(:title, @user.username) %>
+
+<%= gravatar_for @user %>
+<%= @user.username %>, <%= @user.email %>

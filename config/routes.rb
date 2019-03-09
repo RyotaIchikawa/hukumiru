@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get  'pages/show'
   
   devise_for :users
+  resources  :users
   
 end

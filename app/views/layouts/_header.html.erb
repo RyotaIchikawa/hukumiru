@@ -1,15 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "hukumiru", '#', id: "logo" %>
+    <%= link_to "hukumiru", root_path, id: "logo" %>
     <nav>
-       <ul class="nav navbar-nav navbar-right">
-         <% if user_signed_in? %>
-           <li><%= link_to current_user.username, pages_show_path %></li>
-           <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
-           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-         <% else %>
-           <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-           <li><%= link_to 'ログイン', new_user_session_path %></li>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.username, user_path(current_user) %></li>
+          <li><%= link_to "ユーザー一覧", users_path %></li>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "サインアップ", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", new_user_session_path %></li>
         <% end %>
       </ul>
     </nav>
