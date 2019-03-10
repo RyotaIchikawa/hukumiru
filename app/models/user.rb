@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     uniqueness: { case_sensitive: false }
   
-  validates :password, presence: true
+  validates :password, presence: true, allow_nil: true
   
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
