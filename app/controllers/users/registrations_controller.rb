@@ -2,7 +2,7 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
-  
+
   # GET /resource/sign_up
   def new
     super

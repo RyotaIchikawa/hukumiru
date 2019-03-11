@@ -1,6 +1,11 @@
-<% provide(:title, "みんな") %>
+<% provide(:title, "ゆーざー") %>
 
-<% @users.each do |user| %>
-  <%= user.username %>
-  <span><%= user.email %></span>
-<% end %>
+<%= will_paginate %>
+
+<h1>ゆーざー</h1>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
