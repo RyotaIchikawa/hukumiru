@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    flash[:notice] = "ろぐいんしないと　みれないよ　！" unless user_signed_in?
   end
 
   def show

@@ -58,5 +58,5 @@ ja:
       not_found: 'は　みつからないよ　！'
       not_locked: 'は凍結されていません。'
       not_saved:
-        one: "エラーが発生したため %{resource} は保存されませんでした:"
-        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした:"
+        one: " %{resource}じょうほうは　ちゃんとかいてね　！:"
+        other: "%{count} つの　エラーだよ！ %{resource} じょうほうは　ちゃんとかいてね　！:"
