@@ -8,4 +8,9 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.username, class: "gravatar")
   end
   
+  # 渡したユーザーがログイン済か確認
+  def current_user?(user)
+    user == current_user
+  end
+  
 end

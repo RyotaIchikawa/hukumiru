@@ -2,6 +2,7 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :admin_user,         only: :destroy
 
   # GET /resource/sign_up
   def new
@@ -30,8 +31,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private
 
+    # 後で入れる
     def sign_up_params
       params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    end
+    
+    # 管理者か確認
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
     
 end
