@@ -9,4 +9,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+  
 end
