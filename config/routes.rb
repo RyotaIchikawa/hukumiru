@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     sessions:      'users/sessions'
   }
   resources  :users
+  resources :microposts, only: [:create, :destroy]
   
 end
