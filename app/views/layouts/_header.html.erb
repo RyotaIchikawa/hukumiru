@@ -2,7 +2,8 @@
   <div class="container">
     <%= link_to "hukumiru", root_path, id: "logo" %>
     <nav>
-      <ul class="nav navbar-navrails  navbar-right">
+      <ul class="nav navbar-nav navbar-right">
+                 <!--navbar-navrails-->
         <% if user_signed_in? %>
           <li><%= link_to "みんな", users_path %></li>
           <li class="dropdown">
