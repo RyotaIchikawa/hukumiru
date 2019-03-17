@@ -9,7 +9,7 @@ class MicropostsController < ApplicationController
       redirect_to root_path
     else
       @feed_items = []
-      render 'root_path'
+      render "pages/index"
     end
   end
 

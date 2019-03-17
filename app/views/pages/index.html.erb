@@ -1,34 +1,34 @@
 <% if user_signed_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'users/user_info' %>
-      </section>
-      <section class="micropost_form">
-        <%= render 'microposts/micropost_form' %>
-      </section>
-    </aside>
-    <div class="col-md-8">
-      <h3>とうこう</h3>
-      <%= render 'microposts/feed' %>
-    </div>
+  <div class="container-fluid">
+      
+        <section class="user_info">
+          <%= render 'users/user_info' %>
+        </section>
+        <div>
+          <%= link_to "ふくをみる", current_user %>
+        </div>
+        <section class="micropost_form">
+          <%= render 'microposts/micropost_form' %>
+        </section>
   </div>
   
 <% else %>
-  <h1>hukumiru（フクミル）!</h1>
-  <br></br>
-  <br></br>
-  <h2>ふくを　ならべて</h2>
-  <h2>しゃしんを　とって</h2>
-  <h2>ぜんぶで　なんまい　あるか</h2>
-  <h2>かくにん　してみよう！</h2>
-  <br></br>
-  <h2>いらない　ふくは</h2>
-  <h2>どんどん　すてよう！</h2>
-  <br></br>
-  <br></br>
-  <h2>きみも　「みにまりすと」なら</h2>
-  <h2>「しふくのせいふくか」を　しよう！</h2>
-  <br></br>
-  <br></br>
+  <div class="container-fluid text-center">
+    <h1>私服の制服化だ！</h1>
+    <br></br>
+    <br></br>
+    <h3>ふくを　ならべて</h3>
+    <h3>しゃしんを　とって</h3>
+    <h3>ぜんぶで　なんまい　あるか</h3>
+    <h3>かくにん　してみよう！</h3>
+    <br></br>
+    <h3>いらない　ふくは</h3>
+    <h3>どんどん　すてよう！</h3>
+    <br></br>
+    <h3>きみも　ミニマリストなら</h3>
+    <h3>私服の制服化を　しよう！</h3>
+    <br></br>
+    <br></br>
+    <h1><%= link_to "めざす", new_user_registration_path %></h1>
+  </div>
 <% end %>

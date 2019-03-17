@@ -1,26 +1,27 @@
 <% provide(:title, current_user.username + "のぷろふぃーる") %>
 
-<div class="container">
+<div class="container-fluid">
   
 <div class="row">
-  <aside class="col-md-4 col-xs-2">
+  <p class="col-md-3">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.username %>
-      </h1>
+      <h2><%= gravatar_for @user %></h2>
+      <h2><%= @user.username %></h2>
     </section>
-  </aside>
+  </p>
 </div>
-<div class="row">
-  <div class="col-md-4 col-xs-2">
+
+
     <% if @user.microposts.any? %>
-      <h3>ふく (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
+    <div class="row">
+      <h2>ふく (<%= @user.microposts.count %>まい)</h2>
+      <div class="col-md-4 col-xs-2">
+        <ol class="microposts">
+          <%= render @microposts %>
+        </ol>
+        <%= will_paginate @microposts %>
+      </div>
+    </div>
     <% end %>
-  </div>
-  
+
 </div>
