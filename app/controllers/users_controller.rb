@@ -11,6 +11,21 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
   end
   
+  def create
+    @user = User.new(
+      username: params[:username],
+      email   : params[:email],
+      password: params[:password],
+      image   : "default_image_4ef_jpg"
+      )
+    if @user.save
+      flash[:info] = "!!!!!"
+      redirect_to root_url
+    else
+      render 'new'      
+    end
+  end
+  
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "ゆーざーを　けしちゃったよ　！"   # なぜか表示されない
@@ -24,4 +39,10 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
+  # 未使用　あとで
+    def sign_up_params
+      params.require(:user).permit(
+        :username, :email, :password, :image, :password_confirmation
+        )
+    end
 end

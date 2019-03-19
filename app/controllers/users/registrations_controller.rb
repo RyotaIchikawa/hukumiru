@@ -30,11 +30,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   private
-
-    # 実装まだ、後で入れる
-    def sign_up_params
-      params.require(:user).permit(:username, :email, :password, :password_confirmation)
-    end
     
     # 管理者か確認
     def admin_user
