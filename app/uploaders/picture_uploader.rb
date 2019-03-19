@@ -46,4 +46,10 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  
+  # carrierwaveから呼び出し　デフォルトの画像設定
+  def default_url
+    "default_image_4ef_jpg"
+  end
+  
 end

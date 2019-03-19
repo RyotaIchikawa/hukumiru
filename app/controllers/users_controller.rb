@@ -14,9 +14,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       username: params[:username],
-      email   : params[:email],
+      email:    params[:email],
       password: params[:password],
-      image   : "default_image_4ef_jpg"
+      image:    "default_image_4ef_jpg"
       )
     if @user.save
       flash[:info] = "!!!!!"
