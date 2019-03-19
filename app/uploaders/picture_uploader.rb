@@ -49,7 +49,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   
   # carrierwaveから呼び出し　デフォルトの画像設定
   def default_url
-    "default_image_4ef_jpg"
+    "default_image_4ef.jpg"
   end
   
 end

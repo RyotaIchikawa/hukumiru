@@ -26,6 +26,24 @@ class UsersController < ApplicationController
     end
   end
   
+  def edit
+    # @user = User.find_by(id: params[:id])
+    @user.name =     params[:name]
+    @user.email =    params[:email]
+    @user.password = params[:password]
+    if params[:image]
+      @user.image = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image}", image.read)
+    end
+    
+    if @user.save
+      redirect_to root_url
+    else
+      render edit_user_registration_path
+    end
+  end
+  
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "ゆーざーを　けしちゃったよ　！"   # なぜか表示されない
