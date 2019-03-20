@@ -1,36 +1,30 @@
-<header>
-  <nav class="navbar navbar-fixed-top navbar-default navbar-expand-lg">
-    <h1 class="navbar-brand">
-      <%= link_to "hukumiru", root_path, id:"logo" %>
-    </h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+<header class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <%= link_to "hukumiru", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "みんな", users_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "ぷろふぃーる", current_user, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "へんしゅう", edit_user_registration_path(current_user), class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "ろぐあうと", destroy_user_session_path, method: :delete, class:"nav-link" %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              めにゅー
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "ぷろふぃーる", current_user %></li>
+              <li><%= link_to "へんしゅう", edit_user_registration_path(current_user) %></li>
+              <li class="divider"></li>
+              <li><%= link_to "みんな", users_path %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "ろぐあうと", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "とうろく", new_user_registration_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "ろぐいん", new_user_session_path, class:"nav-link" %>
-          </li>
+          <li><%= link_to "とうろく", new_user_registration_path %></li>
+          <li><%= link_to "ろぐいん", new_user_session_path %></li>
         <% end %>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>

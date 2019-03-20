@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions:      'users/sessions'
   }
-  resources  :users
+  resources  :users,      only: [:index, :show]
   resources  :microposts, only: [:create, :destroy]
   
 end

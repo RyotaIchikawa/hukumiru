@@ -37,7 +37,7 @@
     <%= f.label :あいこん %><br />
     <%= f.file_field :image %>
   </div>
-  <br>
+  <br><br>
 
   <div class="field">
     <%= f.label :いまのぱすわーど %> <i>(we need your current password to confirm your changes)</i><br />
@@ -49,8 +49,11 @@
   </div>
 <% end %>
 
-<h3>このあぷりをやめる</h3>
+<br><br>
+<h3>あぷりをやめる</h3>
 
-<p>あかうんとまですてるの…？ <%= button_to "すてる", registration_path(resource_name), data: { confirm: "ほんとにいいの…？" }, method: :delete %></p>
+<p>あかうんとまで　すてるの…？ <%= button_to "すてる", registration_path(resource_name),
+  data: { confirm: "ほんとにいいの…？" }, method: :delete %></p>
+<br><br>
 
 <%= link_to "もどる", :back %>

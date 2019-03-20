@@ -32,7 +32,7 @@ textarea {
   }
 }
 
-/* typography */
+/* タグ */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -90,30 +90,16 @@ header{
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 50px;
+  padding-top: 50px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
   small {
     float: left;
   }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
 }
 
-/* miscellaneous */
+/* デバッグ */
 
 .debug_dump {
   clear: both;
@@ -123,7 +109,7 @@ footer {
   @include box_sizing;
 }
 
-/* forms */
+/* エラー */
 
 #error_explanation {
   color: red;
@@ -133,14 +119,13 @@ footer {
   }
 }
 
-/* Users index */
+/* users/index */
 
 .users {
-  list-style: none;
   margin: 0;
   li {
     overflow: auto;
-    padding: 20px 0;
-    border-bottom: 1px solid $gray-lighter;
+    padding: 5px 0;
+    border-bottom: 1px;
   }
 }
