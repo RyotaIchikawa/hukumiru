@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :authenticate_user!, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
   before_action :admin_user,         only: :destroy
 
   # GET /resource/sign_up
