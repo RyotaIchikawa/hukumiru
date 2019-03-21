@@ -1,22 +1,26 @@
 <% provide(:title, current_user.username + "のぷろふぃーる") %>
 
 <div class="container">
-
-<div class="row">
+  <div class="row">
     <section class="user_info">
       <%= image_tag current_user.image %>
       <h2><%= @user.username %></h2>
     </section>
+  </div>
 </div>
 
-    <% if @user.microposts.any? %>
-      <h2>ふく (<%= @user.microposts.count %>まい)</h2>
-      <div class="col-md-3 col-xs-4">
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-      </div>
-    <% end %>
-
+<div class="container">
+  <% if @user.microposts.any? %>
+    <h2>ふく (<%= @user.microposts.count %>まい)</h2>
+    <div class="row">  
+      <ol class="microposts">
+        <% @microposts.each do |micropost| %>
+        <div class="col-md-3 col-xs-6">
+          <%= render micropost %>
+        </div>
+        <% end %>
+      </ol>
+      <%= will_paginate @microposts %>
+    </div>      
+  <% end %>
 </div>

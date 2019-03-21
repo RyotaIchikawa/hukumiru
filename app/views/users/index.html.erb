@@ -2,8 +2,14 @@
 
 <h2>ゆーざー</h2>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+<div class="row">
+  <ul class="users">
+    <% @users.each do |user| %>
+      <div class="col-md-4">
+        <%= render user %>
+      </div>
+    <% end %>
+  </ul>
+</div>
 
 <%= will_paginate %>

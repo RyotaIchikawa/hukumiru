@@ -1,5 +1,5 @@
 <li>
-  <%= image_tag user.image, class:"img" %>
+  <%= image_tag user.image.url %>
   <%= link_to user.username, user %>
   <% if current_user.admin? && !current_user?(user) %>
     <%= link_to "すてる", user, method: :delete,

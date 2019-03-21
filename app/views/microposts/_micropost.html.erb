@@ -1,14 +1,12 @@
 <li>
-  <span class="content">
-    <%= micropost.content %>
+  <span>
     <%= image_tag micropost.picture.url if micropost.picture? %>
+    <%= micropost.content %>
   </span>
-  
-  <span class="timestamp">
-    <%= time_ago_in_words(micropost.created_at) %> まえ
+  <span>
     <% if current_user?(micropost.user) %>
       <%= link_to "すてる", micropost, method: :delete,
-                                       data: { confirm: "ほんとに？" } %>
+        data: { confirm: "ほんとに？" } %>
     <% end %>
   </span>
 </li>
