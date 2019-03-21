@@ -1,4 +1,4 @@
-<%= image_tag current_user.image %>
+<%= image_tag current_user.image, class: "img-circle" %>
 <h2><%= current_user.username %></h2>
 
 <span>げんざい　<%= pluralize(current_user.microposts.count, "まい") %></span>

@@ -1,8 +1,8 @@
 <li>
-  <%= image_tag user.image.url %>
+  <%= image_tag user.image.url, class: "img-circle" %>
   <%= link_to user.username, user %>
   <% if current_user.admin? && !current_user?(user) %>
-    <%= link_to "すてる", user, method: :delete,
-      data: { confirm: "そこまで　すてる　?" } %>
+    <%= link_to "やめる", user, method: :delete,
+      data: { confirm: "そこまで　すてる？" } %>
   <% end %>
 </li>
