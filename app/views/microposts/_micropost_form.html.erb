@@ -1,13 +1,14 @@
 <!--投稿するフォーム-->
 
 <%= form_for(@micropost) do |f| %>
+  <span class="picture">
+    <%= f.label :picture, class: "btn btn-default" %>
+    <%= f.file_field :picture, class: "fileInput", style: "display:none;" %>
+  </span>
   <div class="field">
     <%= f.text_area :content, placeholder: "ふくのなまえ" %>
   </div>
   <%= f.submit "とうこう", class: "btn btn-primary" %>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-  </span>
 <% end %>
 
 <script type="text/javascript">
