@@ -2,14 +2,18 @@
 
 <%= form_for(@micropost) do |f| %>
   <span class="picture">
-    <%= f.label :picture, class: "btn btn-default" %>
-    <%= f.file_field :picture, class: "fileInput", style: "display:none;" %>
+    <div class="upload-btn-wrapper">
+      <button class="btn">えらぶ</button>
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', onChange:'inform()' %>
+      <h3 id="file_name"></h3>
+    </div>
   </span>
   <div class="field">
     <%= f.text_area :content, placeholder: "ふくのなまえ" %>
-  </div>
+  </div><br></br>
   <%= f.submit "とうこう", class: "btn btn-primary" %>
 <% end %>
+
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {
@@ -18,4 +22,7 @@
       alert('Maximum file size is 5MB. Please choose a smaller file.');
     }
   });
+  function inform(){
+  $("#file_name").text("えらんだよ");
+  }
 </script>
