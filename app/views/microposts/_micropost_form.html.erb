@@ -5,7 +5,7 @@
     <div class="upload-btn-wrapper">
       <button class="btn">えらぶ</button>
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', onChange:'inform()' %>
-      <h3 id="file_name"></h3>
+      <span id="file_name"></span>
     </div>
   </span>
   <div class="field">
@@ -13,6 +13,7 @@
   </div><br></br>
   <%= f.submit "とうこう", class: "btn btn-primary" %>
 <% end %>
+
 
 <!--ファイルサイズが5MBより大きいと警告-->
 <script type="text/javascript">
@@ -23,6 +24,6 @@
     }
   });
   function inform(){
-  $("#file_name").text("えらんだよ");
+  $("#file_name").text("←えらんだよ");
   }
 </script>

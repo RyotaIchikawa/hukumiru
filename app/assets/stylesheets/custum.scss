@@ -126,26 +126,28 @@ footer {
 
 /* 写真投稿ボタン */
 
-.upload-btn-wrapper {
-position: relative;
-overflow: hidden;
-display: inline-block;
-}
- 
 .btn {
 border: 1px solid gray;
 color: gray;
 background-color: white;
 padding: 8px 20px;
 border-radius: 8px;
-font-size: 20px;
+font-size: 15px;
 font-weight: bold;
 }
 
+.upload-btn-wrapper {
+position: relative;
+overflow: hidden;
+display: inline-block;
+}
+
+/*　「ファイルを選択」ボタン */
 .upload-btn-wrapper input[type=file] {
 font-size: 20px;
 position: absolute;
 left: 0;
 top: 0;
+bottom: 10px;
 opacity: 0;
 }

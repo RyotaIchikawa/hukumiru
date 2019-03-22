@@ -6,7 +6,7 @@
   <span>
     <% if current_user?(micropost.user) %>
       <%= link_to "すてる", micropost, method: :delete,
-        data: { confirm: "ほんとに？" } %>
+        data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
     <% end %>
   </span>
 </li>
