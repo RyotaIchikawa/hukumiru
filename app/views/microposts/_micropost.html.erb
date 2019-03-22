@@ -1,6 +1,7 @@
 <li>
   <div class="content-left thumbnail">
     <%= image_tag micropost.picture.to_s, class: "img-rounded" %>
+    <%= micropost.content %>
   </div>
   <div>
     <% if current_user?(micropost.user) %>

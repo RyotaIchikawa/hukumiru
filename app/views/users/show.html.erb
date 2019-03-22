@@ -1,15 +1,12 @@
 <% provide(:title, current_user.username + "のぷろふぃーる") %>
 
-<div class="container">
   <div class="row">
     <section class="col-md-3">
       <%= image_tag current_user.image, class: "img-circle  thumbnail" %>
       <h2><%= @user.username %></h2>
     </section>
   </div>
-</div>
 
-<div class="container">
   <% if @user.microposts.any? %>
     <h2>ふく (<%= @user.microposts.count %>まい)</h2>
     <div class="row">  
@@ -23,4 +20,3 @@
       <%= will_paginate @microposts %>
     </div>      
   <% end %>
-</div>

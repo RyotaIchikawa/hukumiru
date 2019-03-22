@@ -5,17 +5,18 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "とうこう　したよ　！"
+      flash[:notice] = "とうこう　したよ！"
       redirect_to root_path
     else
       @feed_items = []
+      flash[:alert] = "しゃしんが　ないよ！"
       render "pages/index"
     end
   end
 
   def destroy
     @micropost.destroy
-    flash[:success] = "すてたよ　！"
+    flash[:notice] = "１まいへったよ！　やったね！！"
     redirect_to request.referrer || root_url
   end
 

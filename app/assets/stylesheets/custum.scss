@@ -161,3 +161,21 @@ top: 0;
 bottom: 10px;
 opacity: 0;
 }
+
+/*　alert/danger */
+
+.alert {
+	text-align: center;
+}
+
+.alert-info {
+    background-color: #bde9ff;
+    border-color: #bde9ff;
+    color: #4c6977;
+}
+ 
+.alert-danger {
+    background-color: #f3c0c0;
+    border-color: #f3c0c0;
+    color: #3e3a3a;
+}

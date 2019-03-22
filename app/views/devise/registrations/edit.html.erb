@@ -20,7 +20,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :ぱすわーど %> <i>(かえたいときだけかいてね)</i><br />
+    <%= f.label :ぱすわーど %><br>
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -40,7 +40,7 @@
   <br><br>
 
   <div class="field">
-    <%= f.label :いまのぱすわーど %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :いまのぱすわーど %><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 

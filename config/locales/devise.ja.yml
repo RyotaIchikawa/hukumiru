@@ -41,11 +41,11 @@ ja:
       signed_up_but_locked: 'アカウントが凍結されているためログインできません。'
       signed_up_but_unconfirmed: '本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。'
       update_needs_confirmation: 'アカウント情報を変更しました。変更されたメールアドレスの本人確認のため、本人確認用メールより確認処理をおこなってください。'
-      updated: 'へんしゅうが　かんりょう　したよ　！'
+      updated: 'へんしゅう したよ！'
     sessions:
-      signed_in: 'ろぐいん　したよ　！'
-      signed_out: 'ろぐあうと　したよ　！'
-      already_signed_out: 'もう　ろぐあうと　してるよ　！'
+      signed_in: 'ろぐいん　したよ！'
+      signed_out: 'ろぐあうと　したよ！'
+      already_signed_out: 'もう　ろぐあうと　してるよ！'
     unlocks:
       send_instructions: 'アカウントの凍結解除方法を数分以内にメールでご連絡します。'
       send_paranoid_instructions: 'アカウントが見つかった場合、アカウントの凍結解除方法を数分以内にメールでご連絡します。'
@@ -58,5 +58,5 @@ ja:
       not_found: 'は　みつからないよ　！'
       not_locked: 'は凍結されていません。'
       not_saved:
-        one: " %{resource}じょうほうは　ちゃんとかいてね　！:"
-        other: "%{count} つの　エラーだよ！ %{resource} じょうほうは　ちゃんとかいてね　！:"
+        one: "にゅうりょくが　まちがってるよ！"
+        other: "%{count} つの　エラーだよ！:"
