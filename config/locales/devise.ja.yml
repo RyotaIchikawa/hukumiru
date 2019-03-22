@@ -3,19 +3,19 @@
 ja:
   devise:
     confirmations:
-      confirmed: 'あかうんと　とうろく　！'
-      send_instructions: 'めーるを　みてね　！'
-      send_paranoid_instructions: "かくにんの　めーるを　みてね　！"
+      confirmed: 'あかうんと　とうろく！'
+      send_instructions: 'めーるを　みてね！'
+      send_paranoid_instructions: "かくにんの　めーるを　みてね！"
     failure:
-      already_authenticated: 'ろぐいん　してるよ　！'
-      inactive: 'あかうんとを　ゆうこうか　してね　！'
-      invalid: "%{authentication_keys} または　ぱすわーどが　ないよ　！"
-      locked: 'あかうんとが　とうけつ　してるよ　！'
+      already_authenticated: 'ろぐいん　してるよ！'
+      inactive: 'あかうんとを　ゆうこうか　してね！'
+      invalid: "%{authentication_keys} または　ぱすわーどが　ないよ！"
+      locked: 'あかうんとが　とうけつ　してるよ！'
       last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。'
-      not_found_in_database: "%{authentication_keys} または　ぱすわーどが　ないよ　！"
-      timeout: 'もっかい　ろぐいん　してね　！'
-      unauthenticated: 'あかうんととうろく　か　ろぐいん　してね　！'
-      unconfirmed: 'あどれすの　かくにんが　ひつようだよ　！'
+      not_found_in_database: "%{authentication_keys} または　ぱすわーどが　ないよ！"
+      timeout: 'もっかい　ろぐいん　してね！'
+      unauthenticated: 'あかうんととうろく　か　ろぐいん　してね！'
+      unconfirmed: 'あどれすの　かくにんが　ひつようだよ！'
     mailer:
       confirmation_instructions:
         subject: 'アカウントの有効化について'
@@ -35,8 +35,8 @@ ja:
       updated: 'パスワードが正しく変更されました。'
       updated_not_active: 'パスワードが正しく変更されました。'
     registrations:
-      destroyed: 'またきてね　！'
-      signed_up: 'あかうんとが　できたよ　！'
+      destroyed: 'またきてね！'
+      signed_up: 'あかうんとが　できたよ！'
       signed_up_but_inactive: 'ログインするためには、アカウントを有効化してください。'
       signed_up_but_locked: 'アカウントが凍結されているためログインできません。'
       signed_up_but_unconfirmed: '本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。'
