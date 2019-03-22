@@ -7,12 +7,12 @@
 
   <div class="field">
     <%= f.label :なまえ %><br />
-    <%= f.text_field :username %>
+    <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="field">
     <%= f.label :あどれす %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
   
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -52,7 +52,7 @@
 <br><br>
 <h3>あぷりをやめる</h3>
 
-<p>あかうんとまで　すてるの…？ <%= button_to "すてる", registration_path(resource_name),
+<p>あかうんとまで　すてるの…？ <%= button_to "すてる", user_registration_path(resource_name),
   data: { confirm: "ほんとにいいの…？" }, method: :delete %></p>
 <br><br>
 

@@ -1,12 +1,17 @@
 <li>
-  <span class="thumbnail">
-    <%= image_tag micropost.picture_url, class: "img-rounded" %>
-    <%= micropost.content %>
-  </span>
-  <span>
+  <div class="content-left thumbnail">
+    <%= image_tag micropost.picture.to_s, class: "img-rounded" %>
+  </div>
+  <div>
     <% if current_user?(micropost.user) %>
-      <%= link_to "すてる", micropost, method: :delete,
-        data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
+      <div class="btn btn-outline-info">
+        <%= link_to "すてる", micropost, method: :delete,
+          data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
+          <!-- ↑未表示 -->
+      </div>
     <% end %>
-  </span>
+    <div class="content-right">
+      <p class="micropost.time"><%= micropost.created_at.to_s(:datetime_base) %></p>
+    </div>
+  </div>
 </li>

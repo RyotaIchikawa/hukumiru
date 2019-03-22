@@ -25,7 +25,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # DELETE /resource
-  def destroy #入れない？ user_controllerの方に行く
+  def destroy #入れない？ user_controllerの方に行く？　→削除済　→処理不明
     super
   end
 
