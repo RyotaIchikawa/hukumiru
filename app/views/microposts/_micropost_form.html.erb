@@ -1,4 +1,4 @@
-<!--投稿するフォーム-->
+<!--投稿フォーム-->
 
 <%= form_for(@micropost) do |f| %>
   <span class="picture">
@@ -9,7 +9,7 @@
     </div>
   </span>
   <div class="field">
-    <%= f.text_area :content, placeholder: "ふくのなまえ" %>
+    <%= f.text_field :item_name, placeholder: "ふくのなまえ" %>
   </div><br></br>
   <%= f.submit "とうこう", class: "btn btn-primary" %>
 <% end %>
