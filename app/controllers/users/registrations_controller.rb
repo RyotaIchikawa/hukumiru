@@ -25,15 +25,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   # DELETE /resource
-  def destroy #入れない？ user_controllerの方に行く？　→削除済　→処理不明
+  def destroy
     super
   end
-
-  private
-    
-    # 管理者か確認
-    def admin_user
-      redirect_to(root_url) unless current_user.admin?
-    end
     
 end
