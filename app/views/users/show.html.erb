@@ -2,8 +2,9 @@
 
   <div class="row">
     <section class="col-md-3">
-      <%= image_tag current_user.image, class: "img-circle  thumbnail" %>
+      <%= image_tag current_user.image, class: "thumbnail" %>
       <h2><%= @user.username %></h2>
+      <div class="btn primary"><%= link_to "とうこうする", root_path %></div>
     </section>
   </div>
 
