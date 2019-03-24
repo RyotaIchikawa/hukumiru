@@ -11,8 +11,7 @@ User.create!(username:  "わん",
   User.create!(username:  username,
                email: email,
                password:              password,
-               password_confirmation: password)
-               
-
+               password_confirmation: password
+               )
 
 end
