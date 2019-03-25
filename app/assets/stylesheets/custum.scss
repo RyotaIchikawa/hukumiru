@@ -3,8 +3,6 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
-
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -15,21 +13,40 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  color: #546E7A;
 }
 
-section {
+.field{
+  padding-bottom: 20px;
+}
+
+/*section {
   overflow: auto;
-}
+}*/
 
-textarea {
+/*textarea {
   resize: vertical;
-}
+}*/
 
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
   }
+}
+
+/* 段落調整 */
+
+.mb1{
+   margin-bottom: 1em;
+}
+
+.mb2{
+   margin-bottom: 2em;
+}
+
+.mb3{
+   margin-bottom: 3em;
 }
 
 /* タグ */
@@ -48,7 +65,7 @@ h1 {
 h2 {
   font-size: 2em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin: 40px 0px;
   font-weight: normal;
 }
 
@@ -69,18 +86,17 @@ p {
 /* header */
 
 header{
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 2.3em;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   &:hover {
-    color: gray;
     text-decoration: none;
   }
 }
@@ -91,7 +107,6 @@ footer {
   margin-top: 50px;
   padding-bottom: 50px;
   border-top: 1px solid gray;
-  color: black;
 }
 
 /* デバッグ */
@@ -106,13 +121,13 @@ footer {
 
 /* エラー */
 
-#error_explanation {
+/*#error_explanation {
   color: red;
   ul {
     color: red;
     margin: 0 0 30px 0;
   }
-}
+}*/
 
 /* users/index */
 
@@ -134,6 +149,14 @@ footer {
   float: left;
 }
 
+/* 新規登録ボタン */
+
+.btn-xxl {
+  padding: 20px 26px;
+  font-size: 35px;
+  border-radius: 8px;
+}
+
 /* 写真投稿ボタン */
 
 .btn {
@@ -144,6 +167,7 @@ padding: 8px 20px;
 border-radius: 8px;
 font-size: 15px;
 font-weight: bold;
+margin-bottom: 20px;
 }
 
 .upload-btn-wrapper {
