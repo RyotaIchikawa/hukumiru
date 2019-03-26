@@ -3,9 +3,9 @@
     <%= image_tag micropost.picture.to_s, class: "img-thumbnail" %><br>
     <%= micropost.item_name %><br>
     <% if not micropost.brand_name? %>
-      (ぶらんどふめい)
-    <% else %>  
-      (<%= micropost.brand_name %>)
+      (？)
+    <% else %>
+      <%= micropost.brand_name %>
     <% end %>
   </div>
   <div>

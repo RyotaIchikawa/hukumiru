@@ -2,7 +2,7 @@
 
   <div class="row">
     <section class="col-md-3">
-      <%= image_tag current_user.image, class: "thumbnail" %>
+      <%= image_tag @user.image, class: "thumbnail" %>
       <h2><%= @user.username %></h2>
       <%= link_to "とうこうする", root_path, class: "btn btn-primary" %>
     </section>
@@ -13,7 +13,7 @@
     <div class="row">  
       <ol class="microposts">
         <% @microposts.each do |micropost| %>
-        <div class="col-sm-4">
+        <div class="col-xs-10 col-md-3">
           <%= render micropost %>
         </div>
         <% end %>
