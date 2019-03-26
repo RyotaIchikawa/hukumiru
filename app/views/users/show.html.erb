@@ -2,7 +2,9 @@
 
   <div class="row">
     <section class="col-md-3">
-      <%= render 'users/user_info' %>
+      <%= image_tag @user.image, class: "img-thumbnail" %>
+      <h3><%= @user.username %></h3>
+      <div>げんざい　<%= pluralize(@user.microposts.count, "まい") %></div>
       <%= link_to "とうこうする", root_path, class: "btn btn-primary" %>
     </section>
   </div>
