@@ -1,21 +1,23 @@
 <% if user_signed_in? %>
+  <div class="container user_info">
     <div><%= render 'users/user_info' %></div>
     <div class="mb5"><%= link_to "ふくをみる", current_user, class: "btn btn-primary" %></div>
     <div><%= render 'microposts/micropost_form' %></div>
-  
-<% else %>
-<header class="back_image">
-  <div class="text-center">
-    <h1>ミニマリストに　なろう！！</h1>
-    <h3><i class="fas fa-tshirt"></i>ふくを　ならべて</h3>
-    <h3><i class="fa fa-camera-retro"></i>しゃしんを　とって</h3>
-    <h3>ぜんぶで　なんまい　あるか</h3>
-    <h3 class="mb5"><i class="fas fa-user-check"></i>かくにん　してみよう！</h3>
-    <h3>いらない　<i class="fas fa-tshirt"></i>ふくは</h3>
-    <h3 class="mb5">どんどん　<i class="fa fa-trash"></i>すてよう！</h3>
-    <h3>きみも　ミニマリストなら</h3>
-    <h3 class="mb5">私服の制服化を　しよう！</h3>
-    <%= link_to "めざす", new_user_registration_path, class: "btn-xl btn-primary " %>
   </div>
-</header>
+<% else %>
+  <div class="top-wrapper">
+    <div class="bg text-center">
+      <h1><i class="fas fa-tshirt"></i>ふくを　みなおそう！</h3>
+      <h3><i class="fas fa-tshirt"></i>ふくを　ならべて</h3>
+      <h3><i class="fa fa-camera-retro"></i>しゃしんを　とって</h3>
+      <h3>ぜんぶで　なんまい　あるか</h3>
+      <h3 class="mb2"><i class="fas fa-user-check"></i>かくにん　してみよう！</h3>
+      <h3>いらない　<i class="fas fa-tshirt"></i>ふくは</h3>
+      <h3 class="mb2">どんどん　<i class="fa fa-trash"></i>すててしまおう！</h3>
+      <h3>よけいなふくと　オサラバして</h3>
+      <h3 class="mb2">おきにいりのふくだけ　きよう！</h3>
+      <h3 class="mb2">めざせ！　ミニマリスト！！</h3>
+      <%= link_to "めざす", new_user_registration_path, class: "btn-xl btn-primary " %>
+    </div>
+  </div>
 <% end %>

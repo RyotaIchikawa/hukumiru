@@ -1,5 +1,6 @@
 <% provide(:title, @user.username + "のぷろふぃーる") %>
 
+<div class="container user_info">
   <div class="row">
     <section class="col-md-3">
       <%= image_tag @user.image, class: "img-thumbnail" %>
@@ -22,3 +23,4 @@
       <%= paginate @microposts %>
     </div>      
   <% end %>
+</div>

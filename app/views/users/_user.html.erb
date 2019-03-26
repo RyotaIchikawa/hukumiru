@@ -2,7 +2,7 @@
     <%= image_tag user.image.url, class: "img-circle" %>
     <%= link_to user.username, user %>
     <% if current_user?(user) %>
-      <%= link_to "【さくじょ】", user_registration_path, method: :delete,
-        data: { confirm: "ほんとうに？" } %>
+      <%= link_to "さくじょ", user_registration_path, method: :delete,
+        data: { confirm: "ほんとうに？" }, class: "btn btn-primary" %>
     <% end %>
 </li>
