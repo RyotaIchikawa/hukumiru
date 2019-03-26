@@ -1,9 +1,11 @@
-<% provide(:title, current_user.username + "のぷろふぃーる") %>
+<% provide(:title, @user.username + "のぷろふぃーる") %>
 
+<div class="container user_info">
   <div class="row">
     <section class="col-md-3">
-      <%= image_tag @user.image, class: "thumbnail" %>
-      <h2><%= @user.username %></h2>
+      <%= image_tag @user.image, class: "img-thumbnail" %>
+      <h3><%= @user.username %></h3>
+      <div>げんざい　<%= pluralize(@user.microposts.count, "まい") %></div>
       <%= link_to "とうこうする", root_path, class: "btn btn-primary" %>
     </section>
   </div>
@@ -21,3 +23,4 @@
       <%= paginate @microposts %>
     </div>      
   <% end %>
+</div>

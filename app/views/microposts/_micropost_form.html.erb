@@ -1,11 +1,14 @@
 <%= form_for(@micropost) do |f| %>
 
   <div class="field">
-    <%= f.text_field :item_name, placeholder: "ふくのしゅるい" %>
+    <%= f.select :item_name,
+      ["Tシャツ", "シャツ", "ポロシャツ", "ベスト", "スウェット", "パーカー", "ニット", "カーディガン",
+      "タンクトップ", "キャミソール", "ジャージ", "ジャケット", "コート", "マウンテンパーカー", "ダウン",
+      "オールインワン", "ワンピース", "パンツ", "スラックス", "スカート", "スーツ", "その他"] %>
   </div>
   
   <div class="field">
-    <%= f.text_field :brand_name, placeholder: "ぶらんど" %>
+    <%= f.text_field :brand_name, placeholder: "ぶらんどのなまえ" %>
   </div>
   
   <div class="upload-btn-wrapper">
@@ -27,7 +30,4 @@
       alert('5MBいかにしてね！');
     }
   });
-  function inform(){
-  $("#file_name").text("←えらんだよ！");
-  }
 </script>

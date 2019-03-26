@@ -1,5 +1,6 @@
 <li>
-  <div class="content-left thumbnail text-center text-muted">
+  <div class="micropost">
+  <div class="content-left thumbnail text-center">
     <%= image_tag micropost.picture.to_s, class: "img-thumbnail" %><br>
     <%= micropost.item_name %><br>
     <% if not micropost.brand_name? %>
@@ -8,7 +9,9 @@
       <%= micropost.brand_name %>
     <% end %>
   </div>
-  <div>
+  </div>
+  
+  <div class="micropost">
     <% if current_user?(micropost.user) %>
         <%= link_to "すてる", micropost, method: :delete, class: "btn btn-primary",
           data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>

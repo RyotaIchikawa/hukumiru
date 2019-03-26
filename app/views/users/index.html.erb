@@ -1,15 +1,17 @@
 <% provide(:title, "ゆーざー") %>
 
-<h2>ゆーざー</h2>
+<div class="container">
+  <h2>ゆーざー</h2>
 
-<div class="row">
-  <ul class="users">
-    <% @users.each do |user| %>
-      <div class="col-xs-10 col-md-3">
-        <%= render user %>
-      </div>
-    <% end %>
-  </ul>
+  <div class="row">
+    <ul class="users">
+      <% @users.each do |user| %>
+        <div class="col-xs-10 col-md-3">
+          <%= render user %>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+
+  <%= paginate @users %>
 </div>
-
-<%= paginate @users %>
