@@ -6,36 +6,35 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :なまえ %><br />
+    <%= f.label :username, "なまえ" %><br />
     <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :あどれす %><br />
+    <%= f.label :email, "あどれす" %><br />
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :ぱすわーど %>
+    <%= f.label :password, "ぱすわーど" %>
     <% if @minimum_password_length %>
-    <em>(さいてい <%= @minimum_password_length %> もじ)</em>
+    <em>（<%= @minimum_password_length %>もじ〜）</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :ぱすわーど（もっかい） %><br />
+    <%= f.label :password_confirmation, "ぱすわーど（もっかい）" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   
   <div class="field">
-    <%= f.label :あいこん %><br />
-    <%= f.file_field :image %>
+    <%= f.label :image, "あいこん", class: 'btn btn-primary' %>
+    <%= f.file_field :image, style: 'display: none' %>
   </div>
-  <br>
   
   <div class="actions">
-    <%= f.submit "とうろく" %>
+    <%= f.submit "とうろく", class: "btn btn-primary" %>
   </div>
 <% end %>
 

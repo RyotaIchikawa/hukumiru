@@ -23,36 +23,37 @@
     <%= f.label :ぱすわーど %><br>
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <em>←<%= @minimum_password_length %>もじいじょう</em>
+    <div><em>　　　↑<%= @minimum_password_length %>もじいじょう</em></div>
     <% end %>
   </div>
 
   <div class="field">
-    <%= f.label :ぱすわーど（もっかい） %><br />
+    <%= f.label :password_confirmation, "ぱすわーど（もっかい）" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   
   <div class="field">
-    <%= f.label :あいこん %><br />
-    <%= f.file_field :image %>
+    <%= f.label :image, "あいこん", class: 'btn btn-primary' %><br />
+    <%= f.file_field :image, style: 'display: none' %>
   </div>
   <br><br>
 
   <div class="field">
-    <%= f.label :いまのぱすわーど %><br />
+    <%= f.label :current_password, "いまのぱすわーど" %><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "こうしん！" %>
+    <%= f.submit "こうしん！", class: "btn btn-primary" %>
   </div>
 <% end %>
 
 <br><br>
 <h3>あぷりをやめる</h3>
 
-<p>あかうんとまで　すてるの…？ <%= button_to "すてる", user_registration_path,
-  data: { confirm: "ほんとにいいの…？" }, method: :delete %></p>
+<p>あかうんとまで　すてるの…？</p>
+  <%= link_to "すてる", user_registration_path, method: :delete,
+    data: { confirm: "ほんとにいいの…？" }, class: "btn btn-primary" %>
 <br><br>
 
-<%= link_to "もどる", :back %>
+<%= link_to "もどる", :back, class: "btn btn-primary" %>

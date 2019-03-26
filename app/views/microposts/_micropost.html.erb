@@ -1,20 +1,18 @@
 <li>
   <div class="content-left thumbnail text-center text-muted">
-    <%= image_tag micropost.picture.to_s, class: "img-rounded" %><br>
+    <%= image_tag micropost.picture.to_s, class: "img-thumbnail" %><br>
     <%= micropost.item_name %><br>
     <% if not micropost.brand_name? %>
-      (ぶらんどふめい)
-    <% else %>  
-      (<%= micropost.brand_name %>)
+      (？)
+    <% else %>
+      <%= micropost.brand_name %>
     <% end %>
   </div>
   <div>
     <% if current_user?(micropost.user) %>
-      <div class="btn btn-outline-info">
-        <%= link_to "すてる", micropost, method: :delete,
+        <%= link_to "すてる", micropost, method: :delete, class: "btn btn-primary",
           data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
           <!-- ↑未表示 -->
-      </div>
     <% end %>
     <div class="content-right">
       <p class="micropost.time"><%= micropost.created_at.to_s(:datetime_base) %></p>
