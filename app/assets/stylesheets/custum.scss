@@ -59,8 +59,8 @@ body {
    margin-bottom: 2em;
 }
 
-.mb3{
-   margin-bottom: 3em;
+.mb5{
+   margin-bottom: 5em;
 }
 
 /* タグ */
@@ -86,7 +86,7 @@ h2 {
 h3 {
   font-size: 1.5em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-weight: normal;
   color: gray;
 }
@@ -163,45 +163,46 @@ footer {
   float: left;
 }
 
-/* 新規登録ボタン */
+/* microposts */
 
-.btn-xl {
-  padding: 20px 26px;
-  font-size: 35px;
-  border-radius: 8px;
+.microposts{
+  margin: 0 auto;
 }
 
-/* 写真投稿ボタン */
+/* ボタン */
 
 .btn {
-border: 1px solid gray;
-color: gray;
-background-color: white;
-padding: 8px 20px;
-border-radius: 8px;
-font-size: 15px;
-font-weight: bold;
-margin-bottom: 20px;
+  border: 1px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.btn-primary {
-  
+.btn-xl {
+  padding: 30px 60px;
+  font-size: 35px;
+  border-radius: 8px;
+  margin-bottom: 50px;
 }
 
 .upload-btn-wrapper {
-position: relative;
-overflow: hidden;
-display: inline-block;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
 }
 
 /*　「ファイルを選択」ボタン */
 .upload-btn-wrapper input[type=file] {
-font-size: 20px;
-position: absolute;
-left: 0;
-top: 0;
-bottom: 10px;
-opacity: 0;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 10px;
+  opacity: 0;
 }
 
 /*　alert/danger */
@@ -211,13 +212,13 @@ opacity: 0;
 }
 
 .alert-info {
-    background-color: #bde9ff;
-    border-color: #bde9ff;
-    color: #4c6977;
+  background-color: #bde9ff;
+  border-color: #bde9ff;
+  color: #4c6977;
 }
  
 .alert-danger {
-    background-color: #f3c0c0;
-    border-color: #f3c0c0;
-    color: #3e3a3a;
+  background-color: #f3c0c0;
+  border-color: #f3c0c0;
+  color: #3e3a3a;
 }

@@ -14,17 +14,15 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field mb5">
       <%= f.check_box :remember_me %>
       <%= f.label :きおくさせる %>
     </div>
   <% end %>
-  <br><br/>
   
-  <div class="actions">
-    <%= f.submit "ろぐいん" %>
+  <div class="actions mb2">
+    <%= f.submit "ろぐいん", class: "btn btn-primary" %>
   </div>
 <% end %>
 
-<br></br>
 <%= render "devise/shared/links" %>

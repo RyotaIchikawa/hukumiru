@@ -1,4 +1,4 @@
-<% provide(:title, "新規作成") %>
+<% provide(:title, "とうろく") %>
 
 <h2>とうろく</h2>
 
@@ -28,12 +28,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   
-  <div class="field">
+  <div class="field mb5">
     <%= f.label :image, "あいこん", class: 'btn btn-primary' %>
     <%= f.file_field :image, style: 'display: none' %>
   </div>
   
-  <div class="actions">
+  <div class="actions mb2">
     <%= f.submit "とうろく", class: "btn btn-primary" %>
   </div>
 <% end %>
