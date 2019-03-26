@@ -1,14 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
 /* universal */
 
 @font-face{
@@ -34,14 +26,6 @@ body {
   padding-bottom: 20px;
 }
 
-/*section {
-  overflow: auto;
-}*/
-
-/*textarea {
-  resize: vertical;
-}*/
-
 .center {
   text-align: center;
   h1 {
@@ -50,10 +34,6 @@ body {
 }
 
 /* 段落調整 */
-
-.mb1{
-   margin-bottom: 1em;
-}
 
 .mb2{
    margin-bottom: 2em;
@@ -104,12 +84,10 @@ header{
 }
 
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 2.1em;
+  margin-left: 10px;
+  font-size: 2.2em;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  padding-top: 5px;
+  letter-spacing: 10px;
   &:hover {
     text-decoration: none;
   }
@@ -118,19 +96,9 @@ header{
 /* footer */
 
 footer {
-  margin-top: 50px;
+  margin-top: 200px;
   padding-bottom: 50px;
   border-top: 1px solid gray;
-}
-
-/* デバッグ */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
 }
 
 /* エラー */
@@ -183,10 +151,9 @@ footer {
 }
 
 .btn-xl {
-  padding: 30px 60px;
+  padding: 30px 100px;
   font-size: 35px;
   border-radius: 8px;
-  margin-bottom: 50px;
 }
 
 .upload-btn-wrapper {
@@ -195,7 +162,6 @@ footer {
   display: inline-block;
 }
 
-/*　「ファイルを選択」ボタン */
 .upload-btn-wrapper input[type=file] {
   font-size: 20px;
   position: absolute;
@@ -221,4 +187,12 @@ footer {
   background-color: #f3c0c0;
   border-color: #f3c0c0;
   color: #3e3a3a;
+}
+
+
+
+.image {
+  background: image-url("");
+  height: 1000px;
+  background-size: cover;
 }

@@ -16,10 +16,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password, "ぱすわーど" %>
-    <% if @minimum_password_length %>
-    <em>（<%= @minimum_password_length %>もじ〜）</em>
-    <% end %><br />
+    <%= f.label :password, "ぱすわーど" %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
@@ -34,7 +31,7 @@
   </div>
   
   <div class="actions mb2">
-    <%= f.submit "とうろく", class: "btn btn-primary" %>
+    <%= f.submit "とうろく！", class: "btn btn-primary" %>
   </div>
 <% end %>
 
