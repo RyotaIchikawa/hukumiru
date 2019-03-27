@@ -9,17 +9,16 @@
       <%= micropost.brand_name %>
     <% end %>
   </div>
-  </div>
   
   <div>
     <% if current_user?(micropost.user) %>
         <%= link_to "すてる", micropost, method: :delete, class: "btn btn-primary",
-          data: { confirm: "ほんとに？", cancel: "うそ",
-            commit: "ほんと", title: "かくにん" } %>
-          <!-- ↑未表示 -->
+          data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
+        <!-- ↑未表示 -->
     <% end %>
     <div>
       <p class="micropost.time"><%= micropost.created_at.to_s(:datetime_base) %></p>
     </div>
+  </div>
   </div>
 </li>

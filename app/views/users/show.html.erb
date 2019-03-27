@@ -1,21 +1,21 @@
 <% provide(:title, @user.username + "のぷろふぃーる") %>
 
-<div class="container user_info">
-  <div class="row">
-    <section class="col-md-3">
-      <%= image_tag @user.image, class: "img-thumbnail" %>
-      <h3><%= @user.username %></h3>
+<div class="container">
+  <div class="user_info">
+    <%= image_tag @user.image, class: "img-thumbnail" %>
+    <h3><%= @user.username %></h3>
+    <% if current_user?(@user) %>
       <div>げんざい　<%= pluralize(@user.microposts.count, "まい") %></div>
       <%= link_to "とうこうする", root_path, class: "btn btn-primary" %>
-    </section>
+    <% end %>
   </div>
 
   <% if @user.microposts.any? %>
   <div class="row"> 
-    <h2>ふく (<%= @user.microposts.count %>まい)</h2>
+    <h3>ふく (<%= @user.microposts.count %>まい)</h3>
       <ol class="microposts">
         <% @microposts.each do |micropost| %>
-        <div class="col-xs-7 col-md-3">
+        <div class="col-xs-12 col-md-4">
           <%= render micropost %>
         </div>
         <% end %>

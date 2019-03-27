@@ -1,57 +1,65 @@
 <% provide(:title, "へんしゅう") %>
 
 <div class="container">
-  <h2>へんしゅう</h2>
+  <div class="low">
+    <div class="col-sm-12 col-md-6">
+      <h2>へんしゅう</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-    <div class="field">
-      <%= f.label :なまえ %><br />
-      <%= f.text_field :username, autofocus: true %>
-    </div>
-
-    <div class="field">
-      <%= f.label :あどれす %><br />
-      <%= f.email_field :email, autocomplete: "email" %>
-    </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
   
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
+        <div class="field">
+          <%= f.label :なまえ %><br />
+          <%= f.text_field :username, autofocus: true %>
+        </div>
 
-    <div class="field">
-      <%= f.label :ぱすわーど %><br>
-      <%= f.password_field :password, autocomplete: "new-password" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation, "ぱすわーど（もっかい）" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
+        <div class="field">
+          <%= f.label :あどれす %><br />
+          <%= f.email_field :email, autocomplete: "email" %>
+        </div>
   
-    <div class="field">
-      <%= f.label :image, "あいこん", class: 'btn btn-primary' %><br />
-      <%= f.file_field :image, style: 'display: none' %>
-    </div>
-    <br><br>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
 
-    <div class="field">
-      <%= f.label :current_password, "いまのぱすわーど" %><br />
-      <%= f.password_field :current_password, autocomplete: "current-password" %>
-    </div>
+        <div class="field">
+          <%= f.label :ぱすわーど %><br>
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
 
-    <div class="actions mb5">
-      <%= f.submit "こうしん！", class: "btn btn-primary" %>
-    </div>
-  <% end %>
+        <div class="field">
+          <%= f.label :password_confirmation, "ぱすわーど（もっかい）" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+  
+        <div class="field mb3">
+          <%= f.label :image, "あいこん", class: 'btn btn-primary' %><br />
+          <%= f.file_field :image, style: 'display: none' %>
+        </div>
 
-  <h2>あぷりをやめる</h3>
-  <p>あかうんとまで　すてちゃうの？</p>
-  <div>
-    <%= link_to "すてる", user_registration_path, method: :delete,
-      data: { confirm: "ほんとにいいの…？" }, class: "btn btn-primary" %>
+        <div class="field">
+          <%= f.label :current_password, "いまのぱすわーど" %><br />
+          <%= f.password_field :current_password, autocomplete: "current-password" %>
+        </div>
+
+        <div class="actions mb5">
+          <%= f.submit "こうしん！", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
+  
+  
+  <div class="low">
+    <div class="col-sm-12 col-md-6">
+      <h2>あぷりをやめる</h3>
+      <p>あかうんとまで　すてちゃうの？</p>
+      <div>
+        <%= link_to "すてる", user_registration_path, method: :delete,
+          data: { confirm: "ほんとに　いいの？" }, class: "btn btn-primary" %>
+      </div>
 
-  <%= link_to "もどる", :back, class: "btn btn-primary" %>
+      <%= link_to "もどる", :back, class: "btn btn-primary" %>
+    </div>
+  </div>
 </div>

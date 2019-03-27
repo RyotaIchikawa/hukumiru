@@ -1,4 +1,4 @@
-<% provide(:title, "パスワード再設定") %>
+<% provide(:title, "さいせってい") %>
 
 <h2>ぱすわーどわすれた</h2>
 
@@ -6,12 +6,13 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :あどれす %><br />
+    <%= f.label :email, "あどれす" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "あたらしいぱすわーどをきめる" %>
+    <em>↓めーるを　おくるよ</em><br />
+    <%= f.submit "あたらしいぱすわーどをきめる", class: "btn btn-primary" %>
   </div>
 <% end %>
 

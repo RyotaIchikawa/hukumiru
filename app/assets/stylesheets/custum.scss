@@ -29,13 +29,6 @@ body {
   margin: 100px;
 }
 
-/*.center {
-  text-align: center;
-  h1 {
-  margin-bottom: 10px;
-  }
-} */
-
 /* 段落調整 */
 
 .mb2{
@@ -55,8 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 5em;
   letter-spacing: -2px;
-  padding: 320px 0px;
-  text-align: center;
+  padding: 300px 0px 350px 0px;
 }
 
 h2 {
@@ -84,11 +76,11 @@ p {
 /* header */
 
 header{
-  opacity: 0.7;
+  opacity: 0.9;
+  font-weight: bold;
 }
 
 #logo {
-  margin-left: 10px;
   font-size: 2.2em;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -105,40 +97,22 @@ footer {
   border-top: 1px solid gray;
 }
 
-/* エラー */
+/* トップページ */
 
-/*#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}*/
-
-/* users/index */
-
-.users {
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 5px 0;
-  }
+.top-wrapper {
+  height: 1500px;
+  color: #fff;
+  position: relative;
 }
 
-/* users/showのmicroposts表示 */
-
-.content-left{
-  width: 250px;
-  margin: 10px 20px;
-  padding: 20px;
-  height: 220px;
-  float: left;
-}
-
-/* microposts */
-
-.micropost{
-  
+.bg{
+  width: 100%;
+  height: 46%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: image-url("background_image.jpg");
+  background-size: cover;
 }
 
 /* ボタン */
@@ -175,6 +149,48 @@ footer {
   opacity: 0;
 }
 
+
+/* エラー */
+
+/*#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}*/
+
+/* users/index */
+.users{
+  margin: 0;
+  li {
+    overflow: auto;
+  }
+}
+
+.user { /* 削除ボタン出るとはみ出る */
+  width: 250px;
+  padding: 20px;
+  height: 180px;
+  float: left;
+}
+
+/* users/showのmicroposts表示 */
+
+.microposts {
+  margin: 0;
+  li {
+    overflow: auto;
+  }
+}
+
+.micropost {
+  width: 280px; 
+  padding: 20px;
+  height: 340px;
+  float: left;
+}
+
 /*　alert/danger */
 
 .alert {
@@ -192,22 +208,4 @@ footer {
   background-color: #f3c0c0;
   border-color: #f3c0c0;
   color: #3e3a3a;
-}
-
-
-
-.top-wrapper {
-  height: 1500px;
-  color: #fff;
-  position: relative;
-}
-
-.bg{
-  width: 100%;
-  height: 46%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: image-url("background_image.jpg");
-  background-size: cover;
 }
