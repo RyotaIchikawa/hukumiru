@@ -14,7 +14,8 @@
   <div>
     <% if current_user?(micropost.user) %>
         <%= link_to "すてる", micropost, method: :delete, class: "btn btn-primary",
-          data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
+          data: { confirm: "ほんとに？", cancel: "うそ",
+            commit: "ほんと", title: "かくにん" } %>
           <!-- ↑未表示 -->
     <% end %>
     <div>
