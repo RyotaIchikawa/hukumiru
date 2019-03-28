@@ -168,11 +168,16 @@ footer {
   }
 }
 
-.user { /* 削除ボタン出るとはみ出る */
-  width: 250px;
+.user {             /* 削除ボタン出るとはみ出る */
+  width: 230px;
   padding: 20px;
-  height: 180px;
+  margin-left: 20px;
+  height: 250px;
   float: left;
+}
+
+.username {
+  font-size: 20px;
 }
 
 /* users/showのmicroposts表示 */
@@ -185,9 +190,10 @@ footer {
 }
 
 .micropost {
-  width: 280px; 
+  width: 250px; 
   padding: 20px;
-  height: 340px;
+  margin-left: 20px;
+  height: 370px;
   float: left;
 }
 

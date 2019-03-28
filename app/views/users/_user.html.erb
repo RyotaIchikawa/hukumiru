@@ -1,12 +1,13 @@
 <li>
-  <div class="content-left user">
-    <%= image_tag user.image.to_s %>
-  </div>
-  <div>
-    <%= link_to user.username, user %>
-    <% if current_user?(user) %>
-      <%= link_to "さくじょ", user_registration_path, method: :delete,
-        data: { confirm: "ほんとに？" }, class: "btn btn-primary" %>
-    <% end %>
+  <div class="user thumbnail">
+    <%= image_tag user.image.url %>
+    <div class="username">
+      <div><%= link_to user.username, user %></div>
+      <% if current_user?(user) %>
+        <div><%= link_to "さくじょ", user_registration_path, method: :delete,
+          data: { confirm: "ほんとに？" }, class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </li>
