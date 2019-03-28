@@ -15,8 +15,7 @@
         <% if user_signed_in? %>
           <li><%= link_to "とうこう", root_path %></li>
           <li><%= link_to "ぷろふぃーる", current_user %></li>
-          <li><%= link_to "へんしゅう", edit_user_registration_path(current_user) %></li>
-          <li><%= link_to "ゆーざーたち", users_path %></li>
+          <li><%= link_to "ゆーざー", users_path %></li>
           <li><%= link_to "ろぐあうと", destroy_user_session_path, method: :delete, data: { confirm: "ほんとに？" } %></li>
         <% else %>
           <li><%= link_to "とうろく", new_user_registration_path %></li>

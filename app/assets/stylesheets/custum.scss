@@ -111,9 +111,10 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background: image-url("background_image.jpg");
+  background: url("background_image.jpg");
   background-size: cover;
 }
+  
 
 /* ボタン */
 
@@ -168,11 +169,11 @@ footer {
   }
 }
 
-.user {             /* 削除ボタン出るとはみ出る */
-  width: 230px;
+.user { 
+  width: 220px;
   padding: 20px;
-  margin-left: 20px;
-  height: 250px;
+  margin-left: 30px;
+  height: 300px;
   float: left;
 }
 
@@ -190,10 +191,9 @@ footer {
 }
 
 .micropost {
-  width: 250px; 
+  width: 300px; 
   padding: 20px;
-  margin-left: 20px;
-  height: 370px;
+  height: 450px;
   float: left;
 }
 

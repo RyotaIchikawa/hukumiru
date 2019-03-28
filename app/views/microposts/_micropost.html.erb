@@ -4,7 +4,7 @@
     <div><%= image_tag micropost.picture.to_s, class: "img-thumbnail" %></div>
     <div><%= micropost.item_name %></div>
     <% if not micropost.brand_name? %>
-      (？)
+      ？
     <% else %>
       <%= micropost.brand_name %>
     <% end %>

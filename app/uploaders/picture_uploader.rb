@@ -1,6 +1,6 @@
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  process resize_to_fill: [150, 150, "Center"]
+  process resize_to_fill: [300, 300, "Center"]
   process :fix_exif_rotation # => config/initializers/minimagick.rb
   
   # 本番環境用
