@@ -16,7 +16,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    flash[:notice] = "１まいへったよ！　やったね！！"
+    flash[:notice] = "１まいへったよ！"
     redirect_to request.referrer || root_url
   end
 
