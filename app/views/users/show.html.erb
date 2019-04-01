@@ -6,7 +6,7 @@
     <h3><%= @user.username %></h3>
     <% if current_user?(@user) %>
       <div><%= link_to "へんしゅう", edit_user_registration_path(current_user), class: "btn btn-primary" %></div>
-      <div>げんざい　<%= pluralize(@user.microposts.count, "まい") %></div>
+      <div><%= pluralize(@user.microposts.count, "まい") %></div>
       <%= link_to "とうこうする", root_path, class: "btn btn-primary" %>
     <% end %>
   </div>
