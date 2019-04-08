@@ -1,7 +1,14 @@
 
 # アプリ名
 
-hukumiru
+hukumiru<br />
+https://hukumiru.herokuapp.com/<br />
+
+↑<br />
+気軽に見て頂くため、「ログイン」画面上に、<br />
+テスト用ユーザーのアドレス・パスワードを表示しています。<br />
+
+採用担当の方、閲覧の程宜しくお願い致します。<br />
 
 
 
@@ -12,7 +19,7 @@ hukumiru
 
 
 
-# 使用環境とGem、version
+# 使用環境とGem（各version）、機能一覧、技術一覧
 
 ・環境<br />
 Ruby  2.4.1<br />
@@ -24,7 +31,22 @@ node  8.0.0<br />
 devise<br />
 kaminari  0.17.0<br />
 carrierwave 1.2.2<br />
-mini_magick 4.7.0
+mini_magick 4.7.0<br />
+
+・機能一覧<br />
+ログイン機能<br />
+ユーザー認証機能<br />
+ページネーション機能<br />
+画像投稿機能<br />
+
+・技術一覧<br />
+使用言語:       Ruby<br />
+フレームワーク: Ruby on Rils<br />
+セッション管理: Cookie (Deviseより)<br />
+データベース:　 PostgreSQL 0.20.0<br />
+バージョン管理: Git<br />
+リポジトリ管理: GitHub<br />
+インフラ:　     Heroku<br />
 
 
 
