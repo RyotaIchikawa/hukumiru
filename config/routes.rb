@@ -6,7 +6,12 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions:      'users/sessions'
   }
-  resources  :users,      only: [:index, :show]
-  resources  :microposts, only: [:create, :destroy]
+  resources :users do #, only: [:index, :show]
+    member do
+      get :following, :followers
+    end
+  end
+  resources :microposts,    only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   
 end

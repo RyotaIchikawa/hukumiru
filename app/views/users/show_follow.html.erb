@@ -1,4 +1,4 @@
-<% provide(:title, @user.username + "のぷろふぃーる") %>
+<% provide(:title, @user.username + "のふぉろー/ふぉろわー") %>
 
 <div class="container">
   <div class="user_info">
@@ -13,17 +13,16 @@
     <% end %>
   </div>
 
-  <% if @user.microposts.any? %>
-  <div class="row"> 
-    <h3>(<%= @user.microposts.count %> まい)</h3>
-      <ol class="microposts">
-        <% @microposts.each do |micropost| %>
-        <div class="col-xs-12 col-md-4">
-          <%= render micropost %>
+  <% if @users.any? %>
+  <div class="row">
+    <ol class="users">
+      <% @users.each do |user| %>
+        <div class="col-xs-12 col-md-3">
+          <%= render user %>
         </div>
-        <% end %>
-      </ol>
-      <%= paginate @microposts %>
-    </div>      
+      <% end %>
+    </ol>
+  </div>
   <% end %>
+  
 </div>

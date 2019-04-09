@@ -69,7 +69,7 @@ mini_magick 4.7.0<br />
 <br />
   １）「ふくをえらぶ」より、服の画像を選択します。<br />
   ２）「Tシャツ」と書かれたセレクタより、服のジャンルを選択します。<br />
-  ３）「ぶらんど」欄に服のブランド名を記載します（不明の場合は空欄でも投稿可）<br />
+  ３）「ぶらんど」欄に服のブランド名を記載します（不明なら空欄可）。<br />
   ４）「とうこうする」より、投稿します。<br />
   ５）「これくしょん」より、【ユーザー詳細ページ】に移動します。<br />
 <br />
@@ -104,7 +104,8 @@ https://github.com/plataformatec/devise<br />
 ・[Rails] deviseの使い方（rails5版）<br />
 https://qiita.com/cigalecigales/items/f4274088f20832252374<br />
 
-・【Ruby on Rails】gem(Kaminari)でページネーション機能を追加してBootstrapを適用する。<br />
+・【Ruby on Rails】gem(Kaminari)でページネーション機能を追加して<br />
+  Bootstrapを適用する。<br />
 https://qiita.com/residenti/items/1ae1e5ceb59c0729c0b9<br />
 
 ・Github carrierwave<br />

@@ -1,3 +1,4 @@
 <%= image_tag current_user.image, class: "img-thumbnail" %>
 <h3><%= current_user.username %></h3>
+<div class="stats"><%= render 'layouts/stats' %></div>
 <div><%= pluralize(current_user.microposts.count, " まい") %></div>
