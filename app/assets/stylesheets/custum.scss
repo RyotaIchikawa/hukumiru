@@ -219,8 +219,7 @@ footer {
 /* フォロー */
 .stats {
   overflow: auto;
-  /*margin-top: 0;*/
-  /*padding: 0;*/
+  padding: 0;
   a {
     float: left;
     padding: 0 10px;
@@ -240,6 +239,6 @@ footer {
   }
 }
 
-/*.users.follow {
+.users.follow {
   padding: 0;
-}*/
+}
