@@ -1,7 +1,8 @@
-<li>
+<li id="micropost-<%= micropost.id %>" data-micropost-id="<%= micropost.id %>">
   <div class="micropost">
   <div class="content-left thumbnail text-center">
     <div><%= image_tag micropost.picture.to_s, class: "img-thumbnail" %></div>
+    <%= render "likes/like", micropost: micropost %>
     <div><%= micropost.item_name %></div>
     <% if not micropost.brand_name? %>
       ？

@@ -31,6 +31,10 @@ body {
 
 /* 段落調整 */
 
+.mb1{
+   margin-bottom: 1em;
+}
+
 .mb2{
    margin-bottom: 2em;
 }
@@ -195,6 +199,10 @@ footer {
   padding: 20px;
   height: 450px;
   float: left;
+}
+
+.heart-color{
+  color: red;
 }
 
 /*　alert/danger */
