@@ -217,11 +217,7 @@ footer {
 }
 
 /* フォロー */
-.stats {
-  overflow: auto;
-  padding: 0;
-  a {
-    float: left;
+.stats a {
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
     color: gray;
@@ -233,12 +229,4 @@ footer {
       text-decoration: none;
       color: blue;
     }
-  }
-  strong {
-    display: block;
-  }
-}
-
-.users.follow {
-  padding: 0;
 }
