@@ -2,12 +2,7 @@
   <div class="user thumbnail">
     <%= image_tag user.image.url %>
     <div class="username">
-      <div><%= link_to user.username, user %></div>
-      <% if current_user?(user) %>
-        <div><%= link_to "さくじょ", user_registration_path, method: :delete,
-          data: { confirm: "ほんとに？" }, class: "btn btn-primary" %>
-        </div>
-      <% end %>
+      <%= link_to user.username, user %>
     </div>
   </div>
 </li>

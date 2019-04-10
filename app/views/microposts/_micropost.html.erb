@@ -1,5 +1,6 @@
 <li id="micropost-<%= micropost.id %>" data-micropost-id="<%= micropost.id %>">
   <div class="micropost">
+    
   <div class="content-left thumbnail text-center">
     <div><%= image_tag micropost.picture.to_s, class: "img-thumbnail" %></div>
     <%= render "likes/like", micropost: micropost %>
@@ -13,13 +14,11 @@
   
   <div>
     <% if current_user?(micropost.user) %>
-        <%= link_to "すてる", micropost, method: :delete, class: "btn btn-primary",
-          data: { confirm: "ほんとに？", cancel: "うそ", commit: "ほんと", title: "かくにん" } %>
-        <!-- ↑未表示 -->
+      <%= link_to "さくじょ", micropost, method: :delete,
+        class: "btn btn-primary", data: { confirm: "ほんとうにいいの？" } %>
     <% end %>
-    <div>
-      <p class="micropost.time"><%= micropost.created_at.to_s(:datetime_base) %></p>
-    </div>
+      <div><%= micropost.created_at.to_s(:datetime_base) %></div>
   </div>
+  
   </div>
 </li>
