@@ -22,6 +22,10 @@ body {
   color: #546E7A;
 }
 
+a {
+  text-decoration: none;
+}
+
 .field{
   padding-bottom: 20px;
 }
@@ -163,6 +167,7 @@ footer {
   ul {
     color: red;
     margin: 0 0 30px 0;
+    list-style: none;
   }
 }
 
