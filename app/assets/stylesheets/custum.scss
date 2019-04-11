@@ -239,12 +239,12 @@ footer {
 
 .stats a {
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    /*border-left: 1px solid $gray-lighter;*/
     color: gray;
-    &:first-child {
+    /*&:first-child {
       padding-left: 0;
       border: 0;
-    }
+    }*/
     &:hover {
       text-decoration: none;
       color: blue;

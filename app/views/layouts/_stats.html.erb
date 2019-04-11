@@ -2,16 +2,18 @@
 
 <div class="row stats mb3">
   <%= link_to following_user_path(@user), class: "col-6" do %>
-    <strong id="following">
+    <span id="following">
       <%= @user.following.count %>
-    </strong>
+    </span>
     ふぉろー
   <% end %>
   
   <%= link_to followers_user_path(@user), class: "col-6" do %>
-    <strong id="followers">
-      <%= @user.followers.count %>
-    </strong>
-    ふぉろわー
+    <div>
+      <span id="followers">
+        <%= @user.followers.count %>
+      </span>
+      ふぉろわー
+    </div>
   <% end %>
 </div>
