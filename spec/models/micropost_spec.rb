@@ -9,9 +9,9 @@ RSpec.describe Micropost, type: :model do
 
   # bland_nameが16文字以上なら無効
   it "is invalid if blnad_name more than 16 characters" do
-    micropost = FactoryBot.create(:micropost, brand_name: "BURBERRY BLACK LABEL") # 20文字
+    micropost = FactoryBot.build(:micropost, brand_name: "BURBERRY BLACK LABEL") # 20文字
     micropost.valid?
-    expect(micropost.errors[:bland_name]).to include("は　15もじいない　だよ！")
+    expect(micropost.errors[:brand_name]).to include("は　15もじいない　だよ！")
   end
 
 end
