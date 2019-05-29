@@ -1,5 +1,10 @@
 <%= form_for(@micropost) do |f| %>
 
+  <div class="upload-btn-wrapper">
+    <%= f.label :picture, "ふくをえらぶ", class: 'btn btn-primary' %>
+    <%= f.file_field :picture, style: 'display: none', onChange:'inform()' %>
+  </div>
+
   <div class="field">
     <%= f.select :item_name,
       ["Tシャツ", "シャツ", "ポロシャツ", "ベスト", "スウェット", "パーカー",
@@ -11,10 +16,8 @@
   <div class="field">
     <%= f.text_field :brand_name, placeholder: "ぶらんど", :size => "17" %>
   </div>
-  
-  <div class="upload-btn-wrapper">
-    <%= f.label :picture, "ふくをえらぶ", class: 'btn btn-primary' %>
-    <%= f.file_field :picture, style: 'display: none', onChange:'inform()' %>
+
+  <div class="field">
     <%= f.submit "とうこうする", class: "btn btn-primary" %>
   </div>
   
