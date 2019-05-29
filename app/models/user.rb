@@ -13,7 +13,7 @@ class User < ApplicationRecord
   before_save { self.email = email.downcase }
   validates :email, presence: true, length: { maximum: 255 },
     uniqueness: { case_sensitive: false }
-  validates :password, presence: true, allow_nil: true
+  validates :password, presence: true, allow_nil: true, length: { minimum: 6 }
   mount_uploader :image, PictureUploader
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable
