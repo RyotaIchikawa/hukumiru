@@ -1,7 +1,6 @@
 # アプリ名
 
 「hukumiru」<br />
-https://hukumiru.herokuapp.com/<br />
 
 「ログイン」画面に<br />
 テスト用ユーザーのアドレス・パスワードを表示しています。<br />
